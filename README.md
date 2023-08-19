@@ -17,6 +17,9 @@ sed -r s/8443/69/g speederServer.service
 sed -r s/8443/69/g gfw2udpServer.service
 
 Server
+mv speederServer.service /etc/systemd/system/
+
+mv gfw2udpServer.service /etc/systemd/system/
 
 systemctl enable speederServer.service
 
@@ -31,6 +34,10 @@ systemctl start gfw2udpServer.service
 systemctl status gfw2udpServer.service
 
 Client
+
+mv speederClient.service /etc/systemd/system/
+
+mv gfw2udpClient.service /etc/systemd/system/
 
 systemctl enable speederClient.service
 
