@@ -5,6 +5,10 @@ sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/g speederServer.service
 
 sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/g gfw2udpServer.service
 
+sed -r s/8443/69/g speederServer.service
+
+sed -r s/8443/69/g gfw2udpServer.service
+
 Server
 
 systemctl enable speederServer.service
