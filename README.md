@@ -3,7 +3,7 @@ ip=`curl ifconfig.me`
 
 sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/ speederServer.service
 
-sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/ speederServer.service
+sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/ gfw2udpServer.service
 
 Server
 
