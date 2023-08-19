@@ -1,0 +1,14 @@
+﻿[Unit]
+Description = speeder service
+After = syslog.target network-online.target
+
+[Service]
+Type = simple
+User = root
+ExecStart = /usr/local/bin/speeder_amd64 -s -l 5.135.4.89:3545 -r 5.135.4.89:8443 -f 20:10 —mode 0
+ExecReload = /bin/kill -HUP
+ExecStop = /bin/kill -s QUIT PrivateTmp = true
+Restart = on-failure
+
+[Install]
+WantedBy = multi-user.target

@@ -1,0 +1,14 @@
+[Unit]
+Description = gfw2udp service
+After = syslog.target network-online.target
+
+[Service]
+Type = simple
+User = root
+ExecStart = /usr/local/bin/gfw2udp_amd64 -s -l 5.255.103.151:4096 -r 5.255.103.151:8443 -k "D(G+KbPeShVmYq3t6v9y$B&E)H@McQfT" --raw-mode icmp -a
+ExecReload = /bin/kill -HUP
+ExecStop = /bin/kill -s QUIT PrivateTmp = true
+Restart = on-failure
+
+[Install]
+WantedBy = multi-user.target
