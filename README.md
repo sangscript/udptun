@@ -1,5 +1,12 @@
+unzip binary.zip
 
-ip=`curl ifconfig.me`
+chmod +x gfw2udp_amd64 speeder_amd64
+
+mv gfw2udp_amd64 speeder_amd64 /usr/local/bin
+
+
+
+ip=``curl ifconfig.me``
 
 sed -r 's/(\b[0-9]{1,3}\.){3}[0-9]{1,3}\b'/"$ip"/g speederServer.service
 
